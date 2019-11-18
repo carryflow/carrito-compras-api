@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose');
 var app = require('./app');
-var port = process.env.PORT || 3800;
+var port = 3800;
 
 //conexion a la base de datos
 mongoose.Promise = global.Promise;
@@ -14,7 +14,7 @@ useFindAndModify: false})
             console.log("La conexion a la base de datos carrito de compras se ha realizado con exito!!");
 
             //crear servidor
-            app.listen((process.env.PORT || 3800), () => {
+            app.listen( process.env.PORT || 3800, () => {
                 console.log("Servidor corriendo en  http://localhost:3800");
             })
         })
